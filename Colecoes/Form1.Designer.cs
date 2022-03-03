@@ -31,6 +31,7 @@ namespace Colecoes
         {
             this.lista = new System.Windows.Forms.ListBox();
             this.btnList = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lista
@@ -54,11 +55,22 @@ namespace Colecoes
             this.btnList.UseVisualStyleBackColor = true;
             this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(376, 58);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(116, 40);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Outro";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(607, 402);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnList);
             this.Controls.Add(this.lista);
             this.Name = "Form1";
@@ -72,6 +84,7 @@ namespace Colecoes
 
         private System.Windows.Forms.ListBox lista;
         private System.Windows.Forms.Button btnList;
+        private System.Windows.Forms.Button button1;
     }
 }
 
