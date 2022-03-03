@@ -61,11 +61,54 @@ namespace Colecoes
             //nomesList.Clear();
 
             nomesList.Add("Gorete");
-            
+
             foreach (string nome in nomesList)
             {
                 lista.Items.Add(nome);
             }
+        }
+
+        private void btnHashSet_Click(object sender, EventArgs e)
+        {
+            lista.Items.Clear();
+            HashSet<string> carros = new HashSet<string>()
+            {
+                "Opala","Chevete","Pampa","Belina","147"
+            };
+
+            //if (carros.Add("147"))
+            //{
+            //    MessageBox.Show("Adicionado a lista");
+
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Não foi adicionado a lista");
+
+            //}
+
+            //string c = "147";
+            //if (carros.Contains(c))
+            //{
+            //    MessageBox.Show("Contém o veículo: " + c);
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Não contém o veículo: " + c);
+
+            //}
+
+            //carros.Remove("Opala");
+
+            foreach (string carro in carros)
+            {
+                lista.Items.Add(carro);
+            }
+
+            //MessageBox.Show(carros.ElementAt(2));
+            MessageBox.Show(carros.Last());
+
+
         }
     }
 }
