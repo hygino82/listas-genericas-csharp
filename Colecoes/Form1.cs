@@ -122,12 +122,48 @@ namespace Colecoes
             alunos.Add(1, "Gorete");
             alunos.Add(33, "Godofredo");
 
+
+
+            //MessageBox.Show("Quantidade de alunos: " + alunos.Count);
+
+            //alunos.Remove(7);
+
+            int chave = 714;
+            string valor = "Gorete";
+            //if (alunos.ContainsKey(chave))
+            //{
+            //    MessageBox.Show("Existe");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Não existe");
+
+            //}
+
+            if (alunos.ContainsValue(valor))
+            {
+                MessageBox.Show("Existe");
+            }
+            else
+            {
+                MessageBox.Show("Não existe");
+
+            }
+
+            //MessageBox.Show("Primeiro: " + alunos.First().Key);
+
             foreach (KeyValuePair<int, string> aluno in alunos)
             {
                 lista.Items.Add(aluno.Key + " -> " + aluno.Value);
             }
 
-           
+
+            //alunos.Clear();
+            //alunos.ContainsKey(74);
+            //alunos.ContainsValue("Gorete");
+            //alunos.First();
+            //alunos.Last();
+
         }
     }
 }
