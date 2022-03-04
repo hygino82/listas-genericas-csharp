@@ -128,7 +128,7 @@ namespace Colecoes
 
             //alunos.Remove(7);
 
-            int chave = 714;
+            //int chave = 714;
             string valor = "Gorete";
             //if (alunos.ContainsKey(chave))
             //{
@@ -164,6 +164,50 @@ namespace Colecoes
             //alunos.First();
             //alunos.Last();
 
+        }
+
+        private void btnSortedList_Click(object sender, EventArgs e)
+        {
+            lista.Items.Clear();
+            SortedList<int, string> alunos = new SortedList<int, string>()
+            {
+                { 7,"Dilma" },
+                {74,"Roberto"},
+                {26,"Felipe" },
+                { 51,"Juca"}
+            };
+
+            alunos.Add(1, "Gorete");
+            alunos.Add(33, "Godofredo");
+
+
+            //alunos.Remove(51);
+            //alunos.RemoveAt(0);
+            //MessageBox.Show("a lista tem: " + alunos.Count().ToString() + " elementos");
+
+            int chave = 33;
+
+            if (alunos.ContainsKey(chave))
+            {
+                string obj = "";
+                foreach (KeyValuePair<int, string> aluno in alunos)
+                {
+                    if (aluno.Key == chave)
+                    {
+                        obj = aluno.Value;
+                    }
+                }
+                MessageBox.Show("Contém a chave: " + chave + " e o aluno é " + obj);
+            }
+            else
+            {
+                MessageBox.Show("Não contém a chave: " + chave);
+            }
+
+            foreach (KeyValuePair<int, string> aluno in alunos)
+            {
+                lista.Items.Add(aluno);
+            }
         }
     }
 }

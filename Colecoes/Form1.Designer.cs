@@ -33,6 +33,7 @@ namespace Colecoes
             this.btnList = new System.Windows.Forms.Button();
             this.btnHashSet = new System.Windows.Forms.Button();
             this.btnDictionary = new System.Windows.Forms.Button();
+            this.btnSortedList = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lista
@@ -50,7 +51,7 @@ namespace Colecoes
             this.btnList.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnList.Location = new System.Drawing.Point(376, 12);
             this.btnList.Name = "btnList";
-            this.btnList.Size = new System.Drawing.Size(116, 40);
+            this.btnList.Size = new System.Drawing.Size(128, 40);
             this.btnList.TabIndex = 1;
             this.btnList.Text = "List";
             this.btnList.UseVisualStyleBackColor = true;
@@ -61,7 +62,7 @@ namespace Colecoes
             this.btnHashSet.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHashSet.Location = new System.Drawing.Point(376, 58);
             this.btnHashSet.Name = "btnHashSet";
-            this.btnHashSet.Size = new System.Drawing.Size(116, 40);
+            this.btnHashSet.Size = new System.Drawing.Size(128, 40);
             this.btnHashSet.TabIndex = 2;
             this.btnHashSet.Text = "HashSet";
             this.btnHashSet.UseVisualStyleBackColor = true;
@@ -72,17 +73,29 @@ namespace Colecoes
             this.btnDictionary.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDictionary.Location = new System.Drawing.Point(376, 104);
             this.btnDictionary.Name = "btnDictionary";
-            this.btnDictionary.Size = new System.Drawing.Size(116, 40);
+            this.btnDictionary.Size = new System.Drawing.Size(128, 40);
             this.btnDictionary.TabIndex = 3;
             this.btnDictionary.Text = "Dictionary";
             this.btnDictionary.UseVisualStyleBackColor = true;
             this.btnDictionary.Click += new System.EventHandler(this.btnDictionary_Click);
             // 
+            // btnSortedList
+            // 
+            this.btnSortedList.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSortedList.Location = new System.Drawing.Point(376, 150);
+            this.btnSortedList.Name = "btnSortedList";
+            this.btnSortedList.Size = new System.Drawing.Size(128, 40);
+            this.btnSortedList.TabIndex = 4;
+            this.btnSortedList.Text = "SortedList";
+            this.btnSortedList.UseVisualStyleBackColor = true;
+            this.btnSortedList.Click += new System.EventHandler(this.btnSortedList_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 402);
+            this.ClientSize = new System.Drawing.Size(516, 402);
+            this.Controls.Add(this.btnSortedList);
             this.Controls.Add(this.btnDictionary);
             this.Controls.Add(this.btnHashSet);
             this.Controls.Add(this.btnList);
@@ -100,6 +113,7 @@ namespace Colecoes
         private System.Windows.Forms.Button btnList;
         private System.Windows.Forms.Button btnHashSet;
         private System.Windows.Forms.Button btnDictionary;
+        private System.Windows.Forms.Button btnSortedList;
     }
 }
 
