@@ -209,5 +209,27 @@ namespace Colecoes
                 lista.Items.Add(aluno);
             }
         }
+
+        private void btnSortedDictionary_Click(object sender, EventArgs e)
+        {
+            lista.Items.Clear();
+
+            SortedDictionary<int, string> alunos = new SortedDictionary<int, string>()
+            {
+                { 7,"Dilma" },
+                {74,"Roberto"},
+                {26,"Felipe" },
+                { 51,"Juca"}
+            };
+
+            alunos.Add(1, "Gorete");
+            alunos.Add(33, "Godofredo");
+
+            foreach (KeyValuePair<int, string> aluno in alunos)
+            {
+                lista.Items.Add(aluno);
+            }
+            MessageBox.Show(alunos.ElementAt(0).ToString());
+        }
     }
 }
