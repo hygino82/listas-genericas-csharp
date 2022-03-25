@@ -231,5 +231,32 @@ namespace Colecoes
             }
             MessageBox.Show(alunos.ElementAt(0).ToString());
         }
+
+        private void btnSortedSet_Click(object sender, EventArgs e)
+        {
+            lista.Items.Clear();
+            SortedSet<string> nomes = new SortedSet<string>()
+            {
+                "Dilma","Gorete","Jupira","Tonho"
+            };
+
+            if (!nomes.Add("Godofredo"))
+            {
+                MessageBox.Show("Não podes repetir o valor");
+            }
+
+            nomes.Remove("Dilma");
+            foreach (string nome in nomes)
+            {
+                lista.Items.Add(nome);
+            }
+            //nomes.Reverse()
+            //nomes.ElementAt(3)
+            // MessageBox.Show(nomes.First());
+            //mostra o primeiro elemento da lista
+            MessageBox.Show(nomes.Count().ToString());
+            //mostra o número de elementos da lista
+
+        }
     }
 }
