@@ -258,5 +258,44 @@ namespace Colecoes
             //mostra o número de elementos da lista
 
         }
+
+        private void btnQueue_Click(object sender, EventArgs e)
+        {
+            lista.Items.Clear();
+
+            Queue<string> fila = new Queue<string>();
+            fila.Enqueue("Dilma");
+            fila.Enqueue("Gorete");
+            fila.Enqueue("Jupira");
+
+            //MessageBox.Show(fila.Count.ToString());
+
+            foreach (string item in fila)
+            {
+                lista.Items.Add(item);
+            }
+
+            // MessageBox.Show("Primeiro da fila -> " + fila.Peek());
+            // MessageBox.Show(fila.Count.ToString());
+
+            //MessageBox.Show("Primeiro da fila -> " + fila.First());
+            //MessageBox.Show(fila.Count.ToString());
+
+            //MessageBox.Show("ùltimo da fila -> " + fila.Last());
+            //MessageBox.Show(fila.Count.ToString());
+
+            //fila.Clear();//limpa a fila 
+
+            while (fila.Count > 0)
+            {
+                MessageBox.Show("Primeiro da fila -> " + fila.Dequeue());
+                MessageBox.Show(fila.Count.ToString());
+                lista.Items.Clear();
+                foreach (string item in fila)
+                {
+                    lista.Items.Add(item);
+                }
+            }
+        }
     }
 }
